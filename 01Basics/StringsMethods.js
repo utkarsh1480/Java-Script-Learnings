@@ -7,3 +7,4 @@ let str = "I love JavaScript";
 
 // console.log(str.replace("JavaScript", "JS")); // "I love JS"
 // console.log(str.repeat(3)); // "I love JavaScriptI love JavaScriptI love JavaScript"
+console.log(str.indexOf("0")); // 2
