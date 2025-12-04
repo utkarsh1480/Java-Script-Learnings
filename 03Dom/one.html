@@ -9,6 +9,10 @@
           background-color: rgb(16, 17, 17);
           color: aqua;
         }
+        .li{
+            color:rgb(73, 43, 206);
+            background-color: #212121;
+        }
     </style>
 </head>
 <body class="bg">
@@ -17,13 +21,25 @@
         <p id="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ullam neque velit provident assumenda doloribus doloremque nostrum possimus totam? Facere non itaque a ratione. Perspiciatis molestiae nostrum non aliquid exercitationem.</p>
         <p>lorem</p>
          <p>lorem</p>
-         <ul>
-            <li class="li">bana </li>
+         <ul class="list">
+            <li class="li" >bana </li>
             <li class="li">mango</li>
              <li class="li">bana </li>
             <li class="li">mango</li>
          </ul>
     </div>
-    <script src="one.js"></script>
+   
 </body>
+,<script>
+    const list = document.querySelector('.list');
+    list.setAttribute('class', 'list', 'hello');
+  let btn = document.createElement('button');
+  btn.innerText = "click";
+  btn.style.color = "green";
+  btn.style.borderRadius = '20px';
+  btn.style.width = '40px';
+  console.log("hello");
+  list.prepend(btn);
+  btn.remove();
+</script>
 </html>
