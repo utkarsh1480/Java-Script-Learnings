@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom 04</title>
+</head>
+<body>
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(languages){
+        let list = document.createElement('li');
+        list.innerText = `${languages}`;
+        const main_list = document.querySelector('.language')
+        main_list.appendChild(list);
+    }
+    //problem with this is when 1000 name the every time it traverse whole tree which cause optimization problem in large scale project
+    addLanguage("ruber");
+    //solution
+    function optLanguage(langName){
+         let list = document.createElement('li');
+         list.appendChild(document.createTextNode(langName));
+         document.querySelector('.language').appendChild(list);
+    }
+    optLanguage('goLang')
+    //Edit
+    let secondlanguage = document.querySelector('li:nth-child(2)');
+    console.log(secondlanguage);
+    // secondlanguage.innerText = "mojo";
+    const newli = document.createElement('li');
+    newli.textContent = "Mojo";
+    secondlanguage.replaceWith(newli);
+   //Edit
+   let fistLang = document.querySelector("li:nth-child(1)");
+   const fistlan = document.createElement('li');
+   fistlan.innerText = "Java";
+   fistLang.replaceWith(fistlan);
+
+// remove
+const lastlan = document.querySelector("li:last-child");
+lastlan.remove();
+</script>
+</html>
