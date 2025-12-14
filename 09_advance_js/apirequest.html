@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            background-color: #424242;
+            padding: 20px;
+            margin: 50px auto;
+            width: 400px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border:2px solid #616161;
+        }
+        .clickMe {
+            background-color: #1976d2;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body style="background-color: #212121;">
+    <div class="card">
+        <img src="" alt=" My Photo" style="width:100%; border-radius: 8px;">
+        <h2 style="color: white;">API Request Example</h2>
+        <p style="color: white;">Open the console to see the API response.</p>
+        <button class="clickMe">See Profile</button>
+    </div> 
+    
+    
+</body>
+<script>
+    // const url = "https://jsonplaceholder.typicode.com/posts/1";
+    // let xhr = new XMLHttpRequest();
+    // xhr.open('GET', url);
+    // xhr.onreadystatechange = function(){
+    //  console.log(xhr.readyState);
+    //  if(xhr.readyState ===4){
+    //     const data = JSON.parse(xhr.responseText);
+    //     console.log(data); // object returned from the server
+    //     // console.log(xhr.responseText); // strin returned from the server
+    //     console.log(data.id);
+    //  }
+    // };
+    // xhr.send();
+//    Assignment make a card fetch the data and print the follers and photo from the url
+   let divTag = document.querySelector('img');
+   let h2 = document.querySelector('h2');
+   let p = document.querySelector('p');
+   let button = document.querySelector('.clickMe');
+   const url  = "https://api.github.com/users/utkarsh1480";
+   let xhr = new XMLHttpRequest();
+   xhr.open('GET', url);
+   xhr.onreadystatechange = function(){
+    let data = JSON.parse(xhr.responseText)
+     divTag.src = data.avatar_url;
+     h2.innerHTML = `Number of Followers : ${data.followers}`;
+      p.innerHTML = `User-Id : ${data.id}`;
+    console.log(data)
+    button.addEventListener('click', function(){
+      window.open(data.html_url, '_blank');
+   })
+   };
+   // blank tab
+   //What _blank means
+
+// _blank = open the link in a new tab or new window
+
+// In most modern browsers → new tab
+
+// Depends on browser settings
+
+// Common target values
+// Target :	Meaning
+// _self :	Opens in the same tab (default)
+// _blank :	Opens in a new tab/window
+// _parent :	Opens in the parent frame
+// _top	Opens in the full window, breaks out of frames
+   
+   xhr.send();
+</script>
+</html>
