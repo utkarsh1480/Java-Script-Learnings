@@ -28,3 +28,17 @@ Object.defineProperty(chai , 'name', {
 // console.log(chai.name);
 // chai.name = "Piyush";
 // console.log(chai.name);
+
+// 🔥 INTERVIEW ONE-LINERS
+
+// Objects are not iterable by default
+
+// Iteration depends on enumerability
+
+// for...in iterates prototype chain
+
+// for...of requires Symbol.iterator
+
+// 🧠 Real-World Rule (Remember This)
+
+// If you want safe iteration → use Object.entries()
