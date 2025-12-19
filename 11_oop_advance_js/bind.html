@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button> Click Me!</button>
+</body>
+<script>
+class React {
+  constructor() {
+    this.library = "React";
+    this.server = "https://localhost:300";
+
+    document
+      .querySelector('button')
+      .addEventListener('click', this.handleClick.bind(this));  // if we create new reference then how it defines thsi refrene is ctreated for which button the in that case we bind and send this 
+     
+  }
+//8️⃣ VERY IMPORTANT INTERVIEW TRUTH
+//Even though bind() creates a new function reference, the event listener is attached to the element, not to the function.
+//bind(this) creates a new function with fixed this, but the browser associates the event with the element, not the function’s origin.
+  handleClick() {
+    console.log("button clicked")
+    console.log(this.server); // undefined  reftrence avilable button 
+    console.log(this);
+  }
+}
+
+const reac = new React();
+reac.handleClick();
+</script>
+
+</html>
