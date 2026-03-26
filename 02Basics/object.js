@@ -10,6 +10,7 @@ let jsUser = {
     isActive : true,
     location : "Ghazizbad"
 }
+name behind the seen store as string thats why  console.log(jsUser["sym01"] string passed
 
 // console.log(jsUser);
 // console.log(jsUser.name);
