@@ -142,3 +142,65 @@ class Solution {
     }
 }
 ```
+### Array Leaders (Optimision remaning)
+### Equilibrium Point
+```JS
+class Solution {
+    public static int findEquilibrium(int arr[]) {
+        // code here
+        int val=0;
+        int left= arr[0];
+        for(int i =1; i< arr.length; i++){
+         val+=arr[i];
+        }
+        for(int i =1; i< arr.length-1; i++){
+            val-=arr[i];
+            if(left == val ){
+                return i;
+            }
+             left+=arr[i];
+        }
+        return -1;
+        
+    }
+}
+
+```
+
+### Rotate Array
+```JS
+class Solution {
+    public static void Helper(int[] nums, int left, int right ){
+        // left = 0
+        // right = 3
+        //. <
+        //     temp : 
+        //     >
+        while(left < right){
+            int temp = nums[left];
+            nums[left] = nums[right];
+            nums[right] = temp;
+            left++;
+            right--;
+        }
+    }
+    public void rotate(int[] nums, int k) {
+        int n = nums.length;
+        if(n == 0) return;
+        k = k%n;
+        if(k > n){
+            return;
+        }
+        // n= 7
+        // k=3
+
+        // <1 , 2, 3, 4, 5, 6, 7>
+        // Helper(0, 3)
+        Helper(nums, 0, n-k-1);
+        Helper(nums, n-k, n-1);
+        Helper(nums, 0, n-1);
+    }
+}
+M2 avilabe on leetcode
+```
+
