@@ -84,3 +84,61 @@ class Solution {
     }
 }
 ```
+### Sort Color
+```JS
+class Solution {
+    public void sortColors(int[] nums) {
+        int i =0;
+         int k=0; 
+         int j = nums.length-1;
+        //while condition k <=j why because sorting done after 1 sort
+
+        while(k<=j){
+        // check if current element = 1;
+        if(nums[k] == 1){
+            k++;
+        } else if(nums[k] == 0){
+            if(i == k){
+                k++;
+                continue;
+            }
+            int temp = nums[i];
+            nums[i] = nums[k];
+            nums[k]=  temp;
+            i++;
+        } else{
+            int temp = nums[j];
+            nums[j] = nums[k];
+            nums[k]= temp;
+            j--;
+        }
+        } 
+    }
+}
+```
+### Count the Number of Special Characters I
+```JS
+class Solution {
+    public int numberOfSpecialChars(String word) {
+
+        Set<Character> set = new HashSet<>();
+
+        for (int i = 0; i < word.length(); i++) {
+            set.add(word.charAt(i));
+        }
+
+        int count = 0;
+
+        for (char ch = 'a'; ch <= 'z'; ch++) {
+
+            if (set.contains(ch) &&
+                set.contains(Character.toUpperCase(ch))) {
+
+                count++;
+            }
+        }
+
+        return count;
+    }
+}
+```
