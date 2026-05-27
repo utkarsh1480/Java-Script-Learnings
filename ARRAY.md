@@ -209,4 +209,5 @@ Brute Force with Tle avilabe on leetcode
 Link : https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
 Basicall here we need to find those two number which have max difference but the twist is the first number is less than second number
 ```
-
+### Count the Number of Special Characters II
+[Leetcode Link](https://leetcode.com/problems/count-the-number-of-special-characters-ii/?envType=daily-question&envId=2026-05-27)
