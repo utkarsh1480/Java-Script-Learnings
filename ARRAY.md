@@ -213,3 +213,16 @@ Basicall here we need to find those two number which have max difference but the
 [Leetcode Link](https://leetcode.com/problems/count-the-number-of-special-characters-ii/?envType=daily-question&envId=2026-05-27)
 
 Valid Anagram[Leetcode ](https://leetcode.com/problems/valid-anagram/description/)
+
+[Valid Parentheses](https://leetcode.com/problems/valid-parentheses/description/)
+
+[Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/description/)
+
+[Rotate String](https://leetcode.com/problems/rotate-string/description/)
+
+[Count vowels, consonants, digits in a string](url)
+
+[Longest Palindrome](https://leetcode.com/problems/longest-palindrome/description/)
+
+[Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/description/)
+
